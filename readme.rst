@@ -1,5 +1,5 @@
 dataflow.py
-========
+===========
 
 dataflow.py is a port of larrytheliquid's ruby dataflow gem, mostly to
 see if a python version (without blocks) would be useable. Turns out
@@ -9,12 +9,10 @@ as well as actor-like constructs.
 
 dataflow functions:
 
- - **dataflow_vars**: decorator for generating
-   dataflow variables for a function
- - **spawn**(callable, *args): start a thread using the given callable,
-   plus any additional arguments
- - **var**(name=None): create a new dataflow variable (with optional name)
- - **unify**(var, value): set the value of a dataflow variable.
+ - **dataflow_vars**: decorator for generating dataflow variables for a function
+ - **spawn**\(callable, \*args): start a thread using the given callable, plus any additional arguments
+ - **var**\(name=None): create a new dataflow variable (with optional name)
+ - **unify**\(var, value): set the value of a dataflow variable.
 
 dataflow can provide arguments automatically::
 
