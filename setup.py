@@ -4,7 +4,7 @@ from setuptools import *
 
 setup(
 	name='dataflow',
-	version='0.1.0',
+	version='0.1.1',
 	description='a dataflow library for python',
 	author='Tim Cuthbertson',
 	author_email='tim3d.junk+dataflow@gmail.com',
