@@ -53,7 +53,6 @@ class var(object):
 		if not self._bound:
 			_debug("%r waiting" % (self))
 			self._wait()
-		self._condition = None
 		return self._value
 	
 	def __getattr__(self, attr):

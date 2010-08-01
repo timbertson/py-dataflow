@@ -50,6 +50,14 @@ class DataflowTest(unittest.TestCase):
 		# the best we can do is raise a sigint on the main thread
 		self.assertRaises(KeyboardInterrupt, run_and_wait)
 	
+	def test_should_allow_multiple_threads_to_wait_on_a_variable(self):
+		f = var()
+		def prt():
+			return f()
+		spawn(prt)
+		spawn(prt)
+		unify(f, 'a')
+	
 	def test_spawn_should_pass_additional_args(self):
 		f = var()
 		def add_3(num):
