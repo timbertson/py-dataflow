@@ -1,11 +1,7 @@
 dataflow.py
 ===========
 
-dataflow.py is a port of larrytheliquid's ruby dataflow gem, mostly to
-see if a python version (without blocks) would be useable. Turns out
-it is, which is not what I'd initially expected. Having created it,
-I'm interested in seeing how it can be applied to concurrency problems
-as well as actor-like constructs.
+dataflow.py is an experimental port of larrytheliquid's ruby dataflow gem, mostly to see if a python version (without blocks) would be useable. Turns out it is, which is not what I'd initially expected. I'm not really doing anything with it (or working on it), but hopefully it can be of use or interest to others.
 
 dataflow functions:
 
@@ -32,9 +28,7 @@ or you can create them whenever you like::
 	f() # => 6
 
 
-Accessing any attribute or item (dictionary key) of a dataflow
-variable automatically waits for it to be assigned, and passes
-that access onto its value::
+Accessing any attribute or item (dictionary key) of a dataflow variable automatically waits for it to be assigned, and passes that access onto its value::
 
 	f = var()
 	spawn(lambda: unify(f, {'key': 'val'})
